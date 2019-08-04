@@ -1,0 +1,139 @@
+/* All the code is from lazareric.com
+	 I am using style.css and home.js from my front end framework
+	 https://github.com/lazareric/StarterPack. // Be curious. */
+
+      .wrap {
+        width: 100%;
+        padding: 30px;
+        max-width: 700px;
+      }
+      
+      .accordion {
+        display: block;
+        position: relative;
+        width: 100%;
+      }
+      
+      .accordion__item {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .accordion__item:last-child {
+        margin-bottom: 0;
+      }
+      
+      .accordion__title {
+        display: block;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 50px 0 20px;
+        font-size: .875em;
+        font-weight: 500;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+        transition: background-color .2s;
+      }
+      .accordion__title:hover {
+        background-color: #fafafa;
+      }
+      .accordion__title.active {
+        background: #e3f7d4;
+      }
+      .accordion__title.active .x7 {
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+      }
+      .accordion__title.active .x7 .btop {
+        width: 67%;
+        top: 2px;
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+      }
+      .accordion__title.active .x7 .bmid {
+        opacity: 0;
+      }
+      .accordion__title.active .x7 .bbot {
+        width: 67%;
+        bottom: 2px;
+        -webkit-transform: translateY(50%) rotate(45deg);
+                transform: translateY(50%) rotate(45deg);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+      }
+      
+      .accordion__content {
+        display: none;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #eee;
+        border-top: none;
+        line-height: 1.65;
+        padding: 25px;
+        background-color: #fff;
+        font-size: .875em;
+      }
+      
+      .bmenu {
+        width: 26px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 12px;
+      }
+      
+      .btop, .bmid, .bbot {
+        right: 0;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: #333;
+        border-radius: 1px;
+      }
+      
+      .btop {
+        width: 40%;
+      }
+      
+      .bmid {
+        width: 60%;
+      }
+      
+      .bbot {
+        width: 80%;
+      }
+      
+      .x7 {
+        transition: -webkit-transform .3s ease-out;
+        transition: transform .3s ease-out;
+        transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+        -webkit-transform-origin: 60% 75%;
+                transform-origin: 60% 75%;
+      }
+      .x7 .btop {
+        top: 0;
+        transition: width .3s, top .0s, -webkit-transform .3s;
+        transition: width .3s, transform .3s, top .0s;
+        transition: width .3s, transform .3s, top .0s, -webkit-transform .3s;
+        transition-timing-function: ease-out;
+      }
+      .x7 .bmid {
+        top: calc(50% - 1px);
+        -webkit-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+        transition: opacity .1s;
+        transition-timing-function: ease-out;
+      }
+      .x7 .bbot {
+        bottom: 0;
+        transition: width .3s, bottom .0s, -webkit-transform .3s;
+        transition: width .3s, transform .3s, bottom .0s;
+        transition: width .3s, transform .3s, bottom .0s, -webkit-transform .3s;
+        transition-timing-function: ease-out;
+      }
+      
